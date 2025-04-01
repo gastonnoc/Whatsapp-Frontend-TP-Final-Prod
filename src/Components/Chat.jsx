@@ -2,7 +2,7 @@ import React, { useContext, useRef, useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { ContactsContext } from "../Context/ContactsContext";
 import MessagesList from "./MessagesList";
-import "../Styles/chat.css";
+import "../styles/chat.css";
 import { IoMdSend } from "react-icons/io";
 import { FaArrowLeft } from "react-icons/fa";
 import { BsThreeDotsVertical } from "react-icons/bs";
