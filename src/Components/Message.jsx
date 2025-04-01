@@ -1,5 +1,5 @@
 import React from "react";
-import "../Styles/chat.css";
+import "../styles/chat.css";
 const Message = ({ text, time, id, author, estado }) => {
   return (
     <div>
