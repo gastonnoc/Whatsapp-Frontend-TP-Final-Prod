@@ -29,7 +29,7 @@ const ResetPasswordScreen = () => {
 
     return (
         <div className='auth-wrapper'>
-            <img className='auth-logo' src="https://i.pinimg.com/474x/76/58/2d/76582de309b5d8bc74732e1b2b5bf030.jpg" alt="Whatsapp Logo" />
+            <img className='auth-logo' src="src/Assets/WhatsApp Logo.png" alt="Whatsapp Logo" />
             <div className='auth-content'>
                 <h1 className='auth-h1'>Restablece tu contraseña</h1>
                 <form className='auth-form' onSubmit={handleSubmitForm}>
