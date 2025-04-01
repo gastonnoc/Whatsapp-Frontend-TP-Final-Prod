@@ -41,7 +41,6 @@ const ContactsContextProvider = ({ children }) => {
     
         setContactsState((prev_contacts_state) => [...prev_contacts_state, newChat]);
     
-        /* return newChat.id; */
     };
     
 

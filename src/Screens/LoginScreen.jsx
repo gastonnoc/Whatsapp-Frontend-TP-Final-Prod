@@ -8,7 +8,7 @@ import '../styles/auth.css';
 
 const LoginScreen = () => {
     const { login, setUserData } = useContext(AuthContext);
-    const navigate = useNavigate();  // Redirección programática
+    const navigate = useNavigate();  
 
     const initialFormState = {
         email: '',
@@ -19,22 +19,21 @@ const LoginScreen = () => {
     const { responseApiState, postRequest } = useApiRequest(ENVIRONMENT.URL_API + '/api/auth/login');
 
     useEffect(() => {
-        console.log('Respuesta de la API:', responseApiState); // Log para depuración
+        console.log('Respuesta de la API:', responseApiState); 
     
         if (responseApiState.data && !responseApiState.loading) {
             const userData = responseApiState.data.data;
     
-            // Verifica si la propiedad 'user' está presente dentro de 'data'
             if (!userData || !userData.authorization_token || !userData.user) {
                 console.error('⚠️ Error: No se recibió token de autorización o datos de usuario válidos.');
                 return;
             }
     
-            const user = userData.user; // Accede correctamente a los datos del usuario
+            const user = userData.user;
     
             console.log('Estructura de los datos de usuario:', user);
     
-            login(userData.authorization_token);  // Guardamos el token
+            login(userData.authorization_token); 
     
             try {
                 if (user.username && user.email) {
@@ -43,8 +42,8 @@ const LoginScreen = () => {
                         email: user.email,
                         profile_image_base64: user.profile_image_base64 || '',
                     };
-                    setUserData(userToStore);  // Actualiza el contexto con la data del usuario
-                    localStorage.setItem('user', JSON.stringify(userToStore)); // Guardamos en localStorage
+                    setUserData(userToStore);  
+                    localStorage.setItem('user', JSON.stringify(userToStore)); 
                     console.log('✅ Usuario guardado en el contexto y localStorage:', userToStore);
                 } else {
                     console.warn('⚠️ Advertencia: La API no devolvió username o email.');
@@ -53,7 +52,6 @@ const LoginScreen = () => {
                 console.error('❌ Error al guardar en localStorage:', error);
             }
     
-            // Redirigir después de completar el login
             navigate('/home');
         }
     }, [responseApiState, login, setUserData, navigate]);
@@ -70,7 +68,7 @@ const LoginScreen = () => {
                 <button className='register-btn'>Crear cuenta nueva</button>
             </Link>
 
-            <img className='auth-logo' src="src/Assets/WhatsApp Logo.png" alt="Whatsapp Logo" />
+            <img className='auth-logo' src="/WhatsApp%20Logo.png" alt="Whatsapp Logo" />
 
             <div className='auth-content'>
                 <h1 className='auth-h1'>Inicia sesión en WhatsApp</h1>

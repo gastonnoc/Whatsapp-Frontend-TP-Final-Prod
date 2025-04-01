@@ -6,7 +6,7 @@ const MessagesList = ({messages}) => {
         {
             messages.map(message => {
                 return <Message 
-                        key={message.time.toString()} /* key={message.time.toString()} */ 
+                        key={message.time.toString()} 
                         id={message.id} 
                         text={message.text} 
                         author={message.author} 

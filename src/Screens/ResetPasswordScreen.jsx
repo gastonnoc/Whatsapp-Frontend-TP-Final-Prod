@@ -17,16 +17,13 @@ const ResetPasswordScreen = () => {
     const handleSubmitForm = async (e) => {
         e.preventDefault()
 
-        // Llamamos a putRequest y esperamos la respuesta.
         const response = await putRequest(formState)
 
-        // Verificamos si la respuesta tiene la propiedad `ok` que indica que el email está registrado.
         if (response && response.ok) {
-            // Si la respuesta es correcta, redirigimos al usuario a /check-email
+
             navigate('/check-email')
         } else {
-            // Si no, no hacemos nada y simplemente mostramos el error.
-            // No redirigimos y dejamos que el error aparezca en la interfaz.
+
         }
     }
 

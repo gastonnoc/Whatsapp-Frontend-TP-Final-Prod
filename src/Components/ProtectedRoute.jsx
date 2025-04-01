@@ -4,7 +4,7 @@ import {Navigate, Outlet} from 'react-router-dom'
 import {useContext} from 'react'
 
 const ProtectedRoute = () => {
-    //Llama al isAuthenticatedState
+
     const {isAuthenticatedState} = useContext(AuthContext)
     return (
         isAuthenticatedState

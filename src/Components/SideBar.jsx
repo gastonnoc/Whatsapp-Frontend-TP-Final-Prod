@@ -53,12 +53,10 @@ const ContactList = () => {
         </div>
       ))}
       
-      {/* Botón para abrir el modal */}
       <button className="addChatButton" onClick={() => setIsModalOpen(true)}>
         <IoAdd size={30} />
       </button>
 
-      {/* Modal para crear nuevo chat */}
       {isModalOpen && (
         <div className="modalBackground">
           <div className="modalContent">

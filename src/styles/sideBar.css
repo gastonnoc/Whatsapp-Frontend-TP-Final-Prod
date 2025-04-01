@@ -89,12 +89,11 @@ li.contact-item {
     letter-spacing: 1px;
 }
 
-/* Estilos para el botón + para crear un nuevo chat */
 .addChatButton {
     position: absolute;
-    bottom: 30px; /* Fija el botón en el bottom del sidebar */
-    left: 50%; /* Lo coloca en el centro horizontal */
-    transform: translateX(-50%); /* Centrado exacto en el eje X */
+    bottom: 30px; 
+    left: 50%; 
+    transform: translateX(-50%);
     width: 60px;
     height: 60px;
     background-color: var(--message-bg);
@@ -121,14 +120,13 @@ li.contact-item {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5 ); /* Fondo oscuro semi-transparente */
+    background-color: rgba(0, 0, 0, 0.5 ); 
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 999; /* Asegura que el modal esté por encima de otros elementos */
+    z-index: 999; 
 }
 
-/* Estilos del contenido del modal */
 .modalContent {
     background: rgb(32, 44, 51);
     padding: 40px;
@@ -142,7 +140,6 @@ li.contact-item {
     transition: transform 0.3s ease;
 }
 
-/* Título del modal */
 .modalContent h2 {
     color: var(--font-color);
     font-size: 1.8rem;
@@ -150,7 +147,6 @@ li.contact-item {
     text-align: center;
 }
 
-/* Input para el nombre de usuario */
 .modalContent input {
     width: 100%;
     padding: 12px;
@@ -169,7 +165,6 @@ li.contact-item {
     box-shadow: 0 0 5px rgba(0, 0, 255, 0.3);
 }
 
-/* Botón para crear el chat */
 .modalContent button {
     width: 100%;
     padding: 14px;
@@ -189,10 +184,9 @@ li.contact-item {
 }
 
 .modalContent button:active {
-    transform: translateY(2px); /* Efecto de click, botón se hunde */
+    transform: translateY(2px);
 }
 
-/* Botón Cancelar */
 .modalContent button:last-of-type {
     background-color: var(--message-bg);
     margin-bottom: 0;
@@ -202,15 +196,11 @@ li.contact-item {
     background-color: rgb(2, 129, 106);
 }
 
-/* Asegura un buen espaciado entre el contenido */
 .modalContent * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
-
-/* Responsive */
 
 @media (width: 2560px) {
     .sidebar {

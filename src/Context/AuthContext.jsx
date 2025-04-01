@@ -5,7 +5,7 @@ export const AuthContext = createContext();
 const AuthContextProvider = ({ children }) => {
     const isAuthenticatedInitialState = sessionStorage.getItem('authorization_token');
     const [isAuthenticatedState, setIsAutheticatedState] = useState(isAuthenticatedInitialState);
-    const [userData, setUserData] = useState(null); // Nueva variable de estado para el usuario
+    const [userData, setUserData] = useState(null); 
 
     useEffect(() => {
         const token = sessionStorage.getItem('authorization_token');
@@ -22,7 +22,7 @@ const AuthContextProvider = ({ children }) => {
         sessionStorage.removeItem('authorization_token');
         localStorage.removeItem('user');
         setIsAutheticatedState(false);
-        setUserData(null); // Limpiar datos del usuario
+        setUserData(null); 
     };
 
     const login = (authorization_token) => {

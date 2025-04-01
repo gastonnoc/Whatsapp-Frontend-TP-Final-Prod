@@ -6,7 +6,7 @@ import'../styles/auth.css'
 import { useNavigate } from 'react-router-dom';
 
 const RegisterScreen = () => {
-    const navigate = useNavigate();  // Redirección programática
+    const navigate = useNavigate();  
     const formInitialState = {
         username: '',
         email: '',
@@ -82,16 +82,6 @@ const RegisterScreen = () => {
                             onChange={handleChangeInput}
                         />
                     </div>
-
-{/*                     <div>
-                        <label htmlFor='profile_image_base64'></label>
-                        <input className='auth-input'
-                            type='file'
-                            id='profile_image_base64'
-                            name='profile_image_base64'
-                            onChange={handleChangeInput}
-                        />
-                    </div> */}
 
                     {
                         responseApiState.error && <span style={{color: 'red', textAlign: 'center', fontWeight: 'bold', letterSpacing: '1px'}}>{responseApiState.error}</span>

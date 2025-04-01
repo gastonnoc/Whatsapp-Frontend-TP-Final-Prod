@@ -5,15 +5,13 @@ import '../styles/profileScreen.css';
 import { Link } from 'react-router-dom'
 
 const UserProfileScreen = () => {
-  // Contexto para acceder a los datos del usuario y la función para actualizarlos
+
   const { userData, setUserData } = useContext(AuthContext);
 
-  // Estado para almacenar la información del usuario, la nueva imagen y el estado de edición
   const [user, setUser] = useState(null);
-  const [newProfileImage, setNewProfileImage] = useState(null); // Estado para la nueva imagen de perfil
-  const [isEditing, setIsEditing] = useState(false); // Controla si estamos en modo de edición
+  const [newProfileImage, setNewProfileImage] = useState(null); 
+  const [isEditing, setIsEditing] = useState(false); 
 
-  // useEffect para cargar los datos del usuario desde el contexto o localStorage si no están disponibles
   useEffect(() => {
     if (!userData) {
       const storedUser = localStorage.getItem('user');
@@ -25,26 +23,23 @@ const UserProfileScreen = () => {
     } else {
       setUser(userData);
     }
-  }, [userData]); // Dependemos de userData para actualizar al cambiar
+  }, [userData]); 
 
-  // Ruta predeterminada de la imagen de perfil si no se tiene una imagen cargada
   const defaultProfileImage = 'default-user.jpg';
 
-  // Función para manejar el cambio de imagen de perfil- Declaración de handleProfileImageChange como función asíncrona para utilizar el await
   const handleProfileImageChange = async (e) => {
-    const file = e.target.files[0]; // Obtiene el archivo seleccionado
+    const file = e.target.files[0];
     if (file) {
       const reader = new FileReader();
       reader.onloadend = async () => {
-        const base64Image = reader.result; // Convierte la imagen a formato Base64
+        const base64Image = reader.result; 
   
-        setNewProfileImage(base64Image); // Actualiza el estado con la nueva imagen
+        setNewProfileImage(base64Image);
   
-        // Actualiza los datos del usuario en el contexto y localStorage
         const updatedUser = { ...user, profile_image_base64: base64Image };
         setUser(updatedUser);
         setUserData(updatedUser);
-        localStorage.setItem('user', JSON.stringify(updatedUser)); // Guardamos en localStorage
+        localStorage.setItem('user', JSON.stringify(updatedUser)); 
   
         const token = localStorage.getItem('token');
         console.log('Token antes de la solicitud:', token);
@@ -55,12 +50,12 @@ const UserProfileScreen = () => {
         }
   
         try {
-          // Actualiza la imagen de perfil en la base de datos
+
           const response = await fetch(`${import.meta.env.VITE_URL_API}/api/user/profile-image`, {
             method: 'PATCH',
             headers: {
               'Content-Type': 'application/json',
-              'Authorization': `Bearer ${token}`, // JWT
+              'Authorization': `Bearer ${token}`, 
             },
             body: JSON.stringify({
               profile_image_base64: base64Image,
@@ -71,20 +66,18 @@ const UserProfileScreen = () => {
             throw new Error('Error al actualizar la imagen de perfil');
           }
   
-          // Actualizamos el usuario con la imagen guardada en la base de datos
           const updatedUserFromDb = await response.json();
           setUser(updatedUserFromDb);
           setUserData(updatedUserFromDb);
           localStorage.setItem('user', JSON.stringify(updatedUserFromDb));
   
-          // Cierra el modal después de cambiar la imagen
           setIsEditing(false);
   
         } catch (error) {
           console.error('Error al actualizar la imagen de perfil:', error);
         }
       };
-      reader.readAsDataURL(file); // Lee el archivo como URL en base64
+      reader.readAsDataURL(file); 
     }
   };
   
@@ -106,7 +99,7 @@ const UserProfileScreen = () => {
             <div className="edit-button-container">
               <button 
                 className="btn-edit-profile" 
-                onClick={() => setIsEditing(!isEditing)} // Cambia el estado de edición
+                onClick={() => setIsEditing(!isEditing)} 
               >
                 <FaPen />
               </button>
@@ -115,10 +108,8 @@ const UserProfileScreen = () => {
   
           {isEditing && (
             <>
-              {/* Fondo oscuro del modal */}
               <div className="image-upload-overlay" onClick={() => setIsEditing(false)}></div>
   
-              {/* Modal para subir nueva imagen */}
               <div className="image-upload">
                 <input
                   type="file"
