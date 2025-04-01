@@ -45,7 +45,7 @@ const RegisterScreen = () => {
 
     return (
         <div className='auth-wrapper'>
-            <img className='auth-logo' src="src/Assets/WhatsApp Logo.png" alt="Whatsapp Logo" />
+            <img className='auth-logo' src="whatsapp-logo.png" alt="Whatsapp Logo" />
             <div className='auth-content'>
                 <h1 className='auth-h1'>Registrate en WhatsApp</h1>
                 <form className='auth-form' onSubmit={handleSubmitForm}>
