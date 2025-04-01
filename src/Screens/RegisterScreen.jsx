@@ -32,9 +32,9 @@ const RegisterScreen = () => {
                     profile_image_base64: response.data.profile_image_base64 || '',
                 };
                 localStorage.setItem('user', JSON.stringify(userToStore));
-                console.log('Usuario registrado, guardado en localStorage:', userToStore);
+                console.log('Usuario registrado guardado en localStorage:', userToStore);
             } catch (error) {
-                '';
+                console.error('Error al guardar en localStorage:', error);
             }
             navigate('/verify-email');
         }
@@ -97,4 +97,4 @@ const RegisterScreen = () => {
     )
 }
 
-export default RegisterScreen
+export default RegisterScreen 
