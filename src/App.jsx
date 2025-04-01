@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import { ContactsContextProvider } from "./Context/ContactsContext";
 import HomeScreen from "./Screens/HomeScreen";
 import SideBar from "./Components/SideBar";
-import "./Styles/global.css";
+import "./styles/global.css";
 import ChatScreen from "./Screens/ChatScreen";
 import LoginScreen from "./Screens/LoginScreen";
 import RegisterScreen from "./Screens/RegisterScreen";
