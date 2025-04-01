@@ -10,7 +10,6 @@
 
 .profile-content {
     background: var(--borders);
-    border-radius: 15px;
     padding: 30px;
     width: 100%;
     max-width: 100%;
@@ -21,6 +20,7 @@
     flex-direction: column;
     gap: 20px;
     align-items: center;
+    justify-content: center;
 }
 
 .profile-info {
@@ -122,6 +122,7 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    text-align: center;
 }
 
 .image-upload {
@@ -186,4 +187,12 @@
 
 ::-webkit-scrollbar {
     display: none;
+}
+
+@media (max-width: 425px) {
+    .btn-home {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }

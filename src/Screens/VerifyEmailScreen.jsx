@@ -5,7 +5,7 @@ const VerifyEmailScreen = () => {
     return (
         <div className='auth-wrapper'>
             <img className='auth-logo' src="whatsapp-logo.png" alt="Whatsapp Logo" />
-            <h1>
+            <h1 style={{textAlign: 'center'}}>
                 Se te ha enviado un correo de validación, por favor verifica tu email para ingresar a WhatsApp.
             </h1>
         </div>
