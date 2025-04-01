@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import "../Styles/homeScreen.css";
+import "../styles/homeScreen.css";
 import { ContactsContext } from "../Context/ContactsContext";
 
 const HomeScreen = () => {
