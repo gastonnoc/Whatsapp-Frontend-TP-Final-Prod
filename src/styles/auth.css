@@ -1,0 +1,148 @@
+.auth-wrapper {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--background-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.register-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 30px;
+    margin-top: 30px;
+    background-color: var(--message-bg);
+    height: 55px;
+    border-radius: 10px;
+    color: rgb(233, 230, 230);
+    font-size: 17px;
+    outline: none;
+    box-shadow: none;
+    border: solid rgba(0, 0, 0, 0.247) .1px;
+    cursor: pointer;
+}
+
+.register-btn:hover {
+    background-color: rgb(2, 129, 106);
+    transition: .3s;
+}   
+
+.auth-content {
+    background-color: var(--message-bg);
+    border-radius: 20px;
+    padding: 20px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.auth-logo {
+    width: 130px;
+}
+
+.auth-h1 {
+    display: flex;
+    font-size: 26px;
+    align-items: center;
+    justify-content: center;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.auth-input-wrapper {
+    padding: 0;
+    margin: 0;
+}
+
+.auth-input {
+    width: 250px;
+    height: 45px;
+    border: none;
+    outline: none;
+    color: rgb(197, 197, 197);
+    margin: 0;
+    padding: 10px;
+}
+
+input::placeholder {
+    color: rgb(201, 201, 201); 
+    opacity: 1; 
+}
+
+.iniciar-sesion-btn {
+    margin-top: 40px;
+    background-color: rgb(42, 57, 66);
+    height: 55px;
+    border-radius: 10px;
+    color: rgb(233, 230, 230);
+    font-size: 17px;
+    outline: none;
+    box-shadow: none;
+    border: solid rgba(0, 0, 0, 0.247) .1px;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px 2px rgb(49, 49, 49);
+}
+
+.iniciar-sesion-btn:hover {
+    background-color: var(--borders);
+    transition: .3s;
+}   
+
+.reset-password {
+    text-align: center;
+    font-weight: bold;
+}
+
+.reset-password-link {
+    text-decoration: underline;
+}
+
+.cargando {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .register-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 425px) {
+    .auth-content {
+        width: 350px;
+    }
+
+    .iniciar-sesion-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 375px) {
+    .auth-content {
+        width: 350px;
+    }
+}
+
+@media (max-width: 320px) {
+    .auth-content {
+        width: 300px;
+    }
+
+    .auth-h1 {
+        text-align: center;
+    }
+}

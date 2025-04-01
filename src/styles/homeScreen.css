@@ -1,0 +1,186 @@
+.masterContainer {
+    display: flex;
+    flex-direction: column;
+    color: var(--homeScreen-font-color);
+    font-family: 'Helvetica Neue Thin';
+    background-color: rgb(34,46,53);
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.descargaWsp {
+    font-weight: 100;
+    font-size: 35px;    
+}
+
+.descargaBtn {
+    background-color: rgb(0,168,132);
+    border-radius: 30px;
+    width: 230px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+
+.descargaBtn:hover {
+    background-color: rgb(5, 197, 152);
+
+}
+
+.letraDescargaBtn {
+    font-weight: bold;
+    color: rgb(32, 32, 32);
+}
+
+.masterContainer img {
+    margin-top: 150px;
+    width: 310px;
+    padding-bottom: 20px;
+}
+
+.cifrado {
+    margin-top: 222px;
+    font-size: 14px;
+    color: rgb(121, 140, 151);
+    letter-spacing: .3px;
+}
+
+
+.textoDescarga {
+    margin-top: 0;
+    font-size: 15px;
+    text-align: center;
+    line-height: 20px;
+    color: rgb(196, 205, 209);
+    letter-spacing: .3px;
+    font-weight: 500;
+}
+
+@media (width: 2560px) {
+    .homeScreen h1 {
+        font-size: 350%;
+    }
+
+    .masterContainer img {
+        width: 400px;
+    }
+
+    .homeScreen .masterContainer p {
+        font-size: 170%;
+        line-height: 30px;
+    }
+
+    .homeScreen .descargaBtn {
+        width: 420px;
+        height: 70px;
+    }
+
+    .homeScreen .descargaBtn a {
+        font-size: 170%;
+    }
+
+    .homeScreen .cifrado {
+        font-size: 140%;
+    }
+
+    .homeScreen .cifrado svg {
+        display: none;
+    }
+}
+
+@media (width: 2000px) {
+    .homeScreen h1 {
+        font-size: 350%;
+    }
+
+    .masterContainer img {
+        width: 400px;
+    }
+
+    .homeScreen .masterContainer p {
+        font-size: 170%;
+        line-height: 30px;
+    }
+
+    .homeScreen .descargaBtn {
+        width: 420px;
+        height: 70px;
+    }
+
+    .homeScreen .descargaBtn a {
+        font-size: 170%;
+    }
+
+    .homeScreen .cifrado {
+        font-size: 140%;
+    }
+
+    .homeScreen .cifrado svg {
+        display: none;
+    }
+}
+
+@media (min-width: 1440px) {
+
+.homeScreen .masterContainer {
+        height: 100vh;
+    }
+
+    .sideBar {
+        height: 100vh;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .masterContainer h1 {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 610px) {
+    .masterContainer h1 {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 641px) {
+    .masterContainer h1 {
+        font-size: 20px;
+    }
+
+    .masterContainer p {
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    .masterContainer img {
+        width: 200px;
+    }
+
+    .masterContainer button {
+        width: 200px;
+        height: 35px;
+    }
+
+    .masterContainer .cifrado {
+        text-align: center;
+        font-size: 10px;
+        margin-top: 150px;
+    }
+
+}
+
+@media screen and (max-width: 425px) {
+    .homeScreen .homeScreen {
+        width: 1px;
+    }
+
+    .masterContainer h1, .masterContainer p, button, .cifrado, .masterContainer img {
+        display: none;
+    }
+
+}

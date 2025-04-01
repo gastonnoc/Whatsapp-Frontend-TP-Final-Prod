@@ -1,0 +1,54 @@
+:root {
+    --background-dark: rgb(18,32,43);
+    --message-input-bg: rgb(32,44,51);
+    --message-bg: rgb(0,92,75);
+    --borders: rgb(34,44,51);
+    --font-color: rgb(209,214,216);
+    --font-color-sidebar: white;
+    --font-color-messages: rgb(220,237,239);
+    --messageYo-background-color: rgb(0,92,75);
+    --messageUsuario-background-color: rgb(32,44,51); 
+}
+
+@font-face {
+    font-family: 'Helvetica Neue Thin';
+    src: url('../Assets/Fonts/HelveticaNeueThin.otf'); 
+    font-weight: normal; 
+    font-style: normal;  
+}
+
+@font-face {
+    font-family: 'Helvetica Neue Medium';
+    src: url('../Assets/Fonts/HelveticaNeueMedium.otf'); 
+    font-weight: normal; 
+    font-style: normal;  
+}
+
+* {
+    box-sizing: border-box; 
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica Neue Thin", Helvetica, Arial, sans-serif;
+    display: flex;
+    width: 100vw;
+    color: var(--font-color);
+    height: 100vh;
+}
+
+.homeScreen {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+}
+
+.conversationScreen {
+    width: 100vw;
+}
+
+a, link {
+    text-decoration: none;
+    color: var(--font-color);
+}
