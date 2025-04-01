@@ -68,7 +68,7 @@ const LoginScreen = () => {
                 <button className='register-btn'>Crear cuenta nueva</button>
             </Link>
 
-            <img className='auth-logo' src="whatsapp-logo.png" alt="Whatsapp Logo" />
+            <img className='auth-logo' src="default-user.jpg" alt="Whatsapp Logo" />
 
             <div className='auth-content'>
                 <h1 className='auth-h1'>Inicia sesión en WhatsApp</h1>
