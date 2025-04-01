@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import "../Styles/sideBar.css";
+import "../styles/sideBar.css";
 import { ContactsContext } from "../Context/ContactsContext";
 import Contact from "./Contact";
 import { IoCameraOutline, IoAdd } from "react-icons/io5";
