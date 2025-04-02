@@ -17,7 +17,7 @@ const RewritePasswordScreen = () => {
         } else {
             setResetToken(token)
         }
-    }, [navigate])
+    })
 
     const initialFormState = {
         newPassword: '',
