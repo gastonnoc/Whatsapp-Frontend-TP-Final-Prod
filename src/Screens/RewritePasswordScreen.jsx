@@ -34,7 +34,7 @@ const RewritePasswordScreen = () => {
             return
         }
         await postRequest({ newPassword: formState.newPassword, reset_token: resetToken })
-        navigate('/login');
+        navigate('/');
     }
 
     return (
