@@ -94,7 +94,7 @@ const RewritePasswordScreen = () => {
     const [resetToken, setResetToken] = useState(null)
 
     useEffect(() => {
-        const searchParams = new URLSearchParams(window.location.search)
+        const searchParams = new URLSearchParams(window.location.href)
         const token = searchParams.get('reset_token')
         if (!token) {
             navigate('/')
