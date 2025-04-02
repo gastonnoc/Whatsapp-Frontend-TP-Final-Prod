@@ -82,11 +82,11 @@ const RewritePasswordScreen = () => {
 export default RewritePasswordScreen
  */
 
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { useForm } from '../hooks/useForm'
 import { useApiRequest } from '../hooks/useApiRequest'
 import ENVIROMENT from '../config/enviroment'
-import { Link, useNavigate, useSearchParams } from 'react-router-dom'
+import { useNavigate, useSearchParams } from 'react-router-dom'
 
 
 
@@ -99,7 +99,7 @@ const RewritePasswordScreen = () => {
         ()=>{
             
             if(!reset_token) {
-                navigate('/login')
+                navigate('/')
             }
         
         },
@@ -130,7 +130,7 @@ const RewritePasswordScreen = () => {
     useEffect(
         ()=>{
             if(responseApiState.data) {
-                navigate('/login')
+                navigate('/')
             }
         }, 
         [responseApiState]
