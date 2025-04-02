@@ -22,9 +22,7 @@ function App() {
           <Routes>
             <Route path="/" element={<LoginScreen />} />
 
-            <Route element={<ProtectedRoute />}>
-              <Route path="/verify-email" element={<VerifyEmailScreen />} />
-            </Route>
+            <Route path="/verify-email" element={<VerifyEmailScreen />} />
 
             <Route path="/login" element={<LoginScreen />} />
 
