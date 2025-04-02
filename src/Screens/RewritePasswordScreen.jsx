@@ -13,7 +13,7 @@ const RewritePasswordScreen = () => {
         const searchParams = new URLSearchParams(window.location.search)
         const token = searchParams.get('reset_token')
         if (!token) {
-            navigate('/login')
+            navigate('/')
         } else {
             setResetToken(token)
         }
