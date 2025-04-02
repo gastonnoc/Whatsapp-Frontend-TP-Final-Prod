@@ -34,7 +34,7 @@ const RegisterScreen = () => {
                 localStorage.setItem('user', JSON.stringify(userToStore));
                 console.log('Usuario registrado guardado en localStorage:', userToStore);
             } catch (error) {
-                console.error('Error al guardar en localStorage:', error);
+                '';
             }
             navigate('/verify-email');
         }
