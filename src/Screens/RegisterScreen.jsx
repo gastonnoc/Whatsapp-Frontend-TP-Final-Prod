@@ -20,7 +20,6 @@ const RegisterScreen = () => {
 
     const handleSubmitForm = async (event) => {
         event.preventDefault();
-        console.log('Formulario enviado:', formState);
     
         const response = await postRequest(formState);
     
@@ -32,7 +31,7 @@ const RegisterScreen = () => {
                     profile_image_base64: response.data.profile_image_base64 || '',
                 };
                 localStorage.setItem('user', JSON.stringify(userToStore));
-                console.log('Usuario registrado guardado en localStorage:', userToStore);
+
             } catch (error) {
                 '';
             }
