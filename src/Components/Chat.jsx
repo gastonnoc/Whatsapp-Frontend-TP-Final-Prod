@@ -51,8 +51,8 @@ const Chat = () => {
     event.target.message.value = "";
   };
 
-  const goHome = () => {
-    navigate("/");
+  const goBack = () => {
+    navigate("/home");
   };
 
   return (
@@ -62,7 +62,7 @@ const Chat = () => {
       ) : (
         <div className="messages">
           <div className="contactHeader">
-            <button onClick={goHome} className="backToHomeButton">
+            <button onClick={goBack} className="backToHomeButton">
               <FaArrowLeft size="15px" />
             </button>
             <img className="contactImg" src={contact_selected.image} alt={contact_selected.name} />
